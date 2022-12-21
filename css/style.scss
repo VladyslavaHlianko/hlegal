@@ -126,7 +126,23 @@ body{
     position: relative;
 }
 .header__contacts {
-
+    @media screen and(min-width:$breakpoint-md) {
+        width: 648px;
+        margin: 0 auto;
+    }
+    @media screen and(min-width:$breakpoint-lg) {
+        width: 904px;
+        margin: 0 auto;
+        position: relative;
+    }
+    @media screen and(min-width:$breakpoint-xl) {
+        width: 1320px;
+        margin: 0 auto;
+    }
+    @media screen and(min-width:$breakpoint-xxl) {
+        width: 1600px;
+        margin: 0 auto;
+    }
 }
 .header__contacts--box{
     display: flex;
@@ -136,9 +152,12 @@ body{
     background: rgba(245, 245, 250, 0.2);
     @media screen and(min-width:$breakpoint-md) {
         gap: 6px;
-        justify-content: flex-end;
+        justify-content: flex-start;
         padding: 50px 0 0;
         background: transparent;
+    }
+    @media screen and(min-width:$breakpoint-lg) {
+        justify-content: flex-end;
     }
 }
 .header__list {
@@ -193,16 +212,30 @@ body{
     justify-content: space-between;
     padding: 15px;
     align-items: center;
+    @media screen and (min-width:$breakpoint-md) {
+        padding-left: 0;
+    }
+    @media screen and (min-width:$breakpoint-lg) {
+        position: static;
+    }
 }
 .header__logo--img {
     display: flex;
     gap: 4px;
     align-items: flex-start;
+    @media screen and (min-width:$breakpoint-lg) {
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
 }
 .header__logo--text {
     display: flex;
     align-items: center;
     gap: 4px;
+    @media screen and (min-width:$breakpoint-md) {
+        display: none;
+    }
 }
 .header__current--page{
     font-size: 20px;
@@ -212,9 +245,6 @@ body{
 .header__slash{
     width: 12px;
     height: 26px;
-}
-.header__burger--menu {
-
 }
 .header__burger--menu input{
     display: none;
@@ -243,6 +273,9 @@ body{
         content: '';
         top: 5px;
     }
+    @media screen and (min-width:$breakpoint-md) {
+        display: none;
+    }
 }
 .menu__toggle:checked ~ .header__menu--btn{
     background: #E6E6F0;
@@ -259,6 +292,14 @@ body{
     transform: translatey(100%);
     transition: all .3s linear;
     z-index: 5;
+    @media screen and (min-width:$breakpoint-md) {
+        position: absolute;
+        width: auto;
+        left: 0;
+        bottom: 0;
+        background: transparent;
+        padding: 0;
+    }
 }
 .menu__toggle:checked ~ .header__nav{
     transform: translatey(0);
@@ -272,6 +313,9 @@ body{
     background: transparent;
     border: none;
     padding: 0;
+    @media screen and (min-width:$breakpoint-md) {
+        display: none;
+    }
 }
 .header__nav--close::before, 
 .header__nav--close::after{
@@ -298,6 +342,10 @@ body{
     text-align: center;
     gap: 15px;
     margin-top: 20px;
+    @media screen and (min-width:$breakpoint-md) {
+        flex-direction: row;
+        margin: 0;
+    }
 }
 .header__nav--item {
     & .active{
@@ -314,6 +362,13 @@ body{
     color: #24A3FF;
     background: $bg_color;
     border-radius: 12px;
+    @media screen and (min-width:$breakpoint-md) {
+        font-size: 16px;
+        line-height: 20px;
+        color: #fff;
+        padding: 0;
+        background: transparent;
+    } 
 }
 .header__nav--link:active{
     background: $separator_color;
