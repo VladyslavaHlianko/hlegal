@@ -87,13 +87,13 @@ $breakpoint-xxl: 1920px;
     line-height: 37px;
     color: #323264;
 }
-@mixin sub_title{
+@mixin subtitle{
     font-weight: 700;
     font-size: 22px;
     line-height: 27px;
     color: #323264;
 }
-@mixin pre_sub_title($color:#323264, $font-weight:700){
+@mixin pre_subtitle($color:#323264, $font-weight:700){
     font-weight: $font-weight;
     font-size: 16px;
     line-height: 20px;
@@ -160,7 +160,7 @@ body{
     color: #FFFFFF;
 }
 .header__phone{
-    @include pre_sub_title(white);
+    @include pre_subtitle(white);
 }
 .header__dot{
     width: 6px;
@@ -172,8 +172,8 @@ body{
         display: block;
     }
 }
-.header__city{
-    @include pre_sub_title(white, 400);
+.header__address{
+    @include pre_subtitle(white, 400);
     display: none;
     @media screen and(min-width:$breakpoint-md) {
         display: block;
@@ -258,6 +258,7 @@ body{
     padding: 12px;
     transform: translatey(100%);
     transition: all .3s linear;
+    z-index: 5;
 }
 .menu__toggle:checked ~ .header__nav{
     transform: translatey(0);
