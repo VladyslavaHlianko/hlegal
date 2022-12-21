@@ -334,6 +334,9 @@ body{
     @include hero(white);
     width: 315px;
     text-align: center;
+    @media screen and(min-width:$breakpoint-md) {
+        width: auto;
+    }
 }
 .container__btn--scroll{
     min-width: 42px;

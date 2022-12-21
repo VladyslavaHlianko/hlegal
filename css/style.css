@@ -321,6 +321,11 @@ body {
   width: 315px;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .container__main--title {
+    width: auto;
+  }
+}
 
 .container__btn--scroll {
   min-width: 42px;
